@@ -10,6 +10,7 @@ This is what the model uses & what it does.
 cd dl-model-template
 python3 -m venv ./venv
 source ./venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
@@ -28,7 +29,7 @@ python main.py --phase validate
 ### Testing
 
 ```shell
-python main.py --phase test --in xxx/xxx.jpg  --out ./results/
+python main.py --phase test --in_path xxx/xxx.jpg  --out_path ./results/
 ```
 
 ## Results
