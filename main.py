@@ -1,8 +1,11 @@
 import torch
 import argparse
-from config import config as cfg
 import logging
 import coloredlogs
+
+from config import (config as cfg,
+                    architecture as arch,
+                    data_loaders as dl)
 
 # Setup colorful logging
 logger = logging.getLogger(__name__)
@@ -13,6 +16,7 @@ coloredlogs.install(level='INFO', logger=logger)
 def train(model, optimizer, criterion, resume_from_epoch, max_val_accuracy):
     """
     Train the model
+
     :param model: Model to be trained
     :param optimizer: Method to compute gradients
     :param criterion: Criterion for computing loss
@@ -29,6 +33,7 @@ def train(model, optimizer, criterion, resume_from_epoch, max_val_accuracy):
 def val(model):
     """
     Check model accuracy on validation set.
+
     :param model: Model to be tested
     :return: Validation accuracy
     """
@@ -42,14 +47,14 @@ def test(model):
 
 if __name__ == '__main__':
     # CLI
-    parser = argparse.ArgumentParser(description=f'CLI for {config.model_name}')
+    parser = argparse.ArgumentParser(description=f'CLI for {arch.model_name}')
     parser.add_argument('--phase', type=str, default='train')
     parser.add_argument('--load', type=bool, default=False)
     args = parser.parse_args()
 
-    model = cfg.model
-    optimizer = cfg.optimizer
-    criterion = cfg.criterion
+    model = arch.model
+    optimizer = arch.optimizer
+    criterion = arch.criterion
     resume_from_epoch = cfg.resume_from_epoch
     max_val_accuracy = cfg.max_val_accuracy
 
