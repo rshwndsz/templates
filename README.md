@@ -6,10 +6,10 @@ This is what the model uses & what it does.
 
 ## Getting Started
 
-```shell
+```bash
 cd dl-model-template
 python3 -m venv ./venv
-source ./venv/bin/activate
+source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 mkdir dataset
@@ -19,19 +19,20 @@ Add your data into `dataset/`.
 
 ### Training
 
-```shell
-python main.py --phase train
+Start the `visdom` server.  
+```bash
+visdom
 ```
 
-### Validation
+Run the project.  
 
-```shell
-python main.py --phase validate
+```bash
+python main.py --phase train
 ```
 
 ### Testing
 
-```shell
+```bash
 python main.py --phase test --in_path xxx/xxx.jpg  --out_path ./results/
 ```
 
