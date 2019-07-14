@@ -18,7 +18,8 @@ max_val_accuracy = 0
 # Data-specific
 project_root = os.getcwd()
 dataset_root = os.path.join(project_root, 'datasets', 'dataset_name')
-model_path = os.path.join(project_root, 'checkpoints', 'model_final_name.pth')
+model_path = os.path.join(project_root, 'checkpoints', 'model_best.pth')
+model_final_path = os.path.join(project_root, 'checkpoints', 'model_final.pth')
 results_dir = os.path.join(project_root, 'results')
 
 
