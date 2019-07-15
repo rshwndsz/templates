@@ -13,7 +13,7 @@ coloredlogs.install(level='INFO', logger=logger)
 
 
 # noinspection PyShadowingNames
-def train(model, optimizer, criterion, resume_from_epoch, max_val_accuracy):
+def train(model, optimizer, criterion, resume_from_epoch, min_val_loss):
     """
     Train the model
 
@@ -21,7 +21,7 @@ def train(model, optimizer, criterion, resume_from_epoch, max_val_accuracy):
     :param optimizer: Method to compute gradients
     :param criterion: Criterion for computing loss
     :param resume_from_epoch: Resume training from this epoch
-    :param max_val_accuracy: Save models with greater accuracy on validation set
+    :param min_val_loss: Save models with lesser loss value on val set
     """
     for epoch in range(resume_from_epoch, cfg.n_epochs):
         # training
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     optimizer = arch.optimizer
     criterion = arch.criterion
     resume_from_epoch = cfg.resume_from_epoch
-    max_val_accuracy = cfg.max_val_accuracy
+    max_val_accuracy = cfg.min_val_loss
 
     if args.load:
         # Load from checkpoint
@@ -64,7 +64,7 @@ if __name__ == '__main__':
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         resume_from_epoch = checkpoint['epoch']
-        max_val_accuracy = checkpoint['val_accuracy']
+        min_val_loss = checkpoint['val_loss']
 
     if args.phase == 'train':
         train(model, optimizer, criterion, resume_from_epoch, max_val_accuracy)
