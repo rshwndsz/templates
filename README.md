@@ -6,16 +6,18 @@ This is what the model uses & what it does.
 
 ## Getting Started
 
+Create a conda environment with python interpreter of choice.
 ```bash
-cd dl-model-template
-python3 -m venv ./venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-mkdir dataset
+conda create --name pytorch1.1 python=3.7.3
+conda activate pytorch1.1
 ```
+Install all dependencies using `conda install`.
 
-Add your data into `dataset/`.
+```bash
+cd name-of-model
+mkdir datasets/
+```
+Add your datasets into `datasets/`.
 
 ### Training
 
