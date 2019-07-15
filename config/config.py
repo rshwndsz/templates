@@ -12,7 +12,7 @@ num_workers = 4
 print_freq = 20
 val_freq = 1
 resume_from_epoch = 0
-max_val_accuracy = 0
+min_val_loss = 1000
 
 
 # Data-specific
