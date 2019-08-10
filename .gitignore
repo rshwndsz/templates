@@ -124,5 +124,4 @@ dmypy.json
 .pyre/
 dataset/
 
-# PyCharm
-.idea/
+datasets/
