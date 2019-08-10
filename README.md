@@ -6,16 +6,20 @@ This is what the model uses & what it does.
 
 ## Getting Started
 
+Create a conda environment using the conda config file `environment.yml` or 
+the pip `requirements.txt` file.
+The conda config file works only on the OS it was generated on (MacOS for me).
+
 ```bash
-cd dl-model-template
-python3 -m venv ./venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-mkdir dataset
+conda create -f environment.yml
+```
+Install all dependencies using `conda install`.
+
+```bash
+cd name-of-model
 ```
 
-Add your data into `dataset/`.
+Add your datasets into `datasets/`.
 
 ### Training
 
