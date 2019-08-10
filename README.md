@@ -6,22 +6,25 @@ This is what the model uses & what it does.
 
 ## Getting Started
 
-Create a conda environment with python interpreter of choice.
+Create a conda environment using the conda config file `environment.yml` or 
+the pip `requirements.txt` file.
+The conda config file works only on the OS it was generated on (MacOS for me).
+
 ```bash
-conda create --name pytorch1.1 python=3.7.3
-conda activate pytorch1.1
+conda create -f environment.yml
 ```
 Install all dependencies using `conda install`.
 
 ```bash
 cd name-of-model
-mkdir datasets/
 ```
+
 Add your datasets into `datasets/`.
 
 ### Training
 
 Start the `visdom` server.  
+
 ```bash
 visdom
 ```
