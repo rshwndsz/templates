@@ -1,0 +1,3 @@
+[submodule "pytorch-local-segmentation"]
+	path = pytorch-local-segmentation
+	url = https://github.com/rshwndsz/torch-seg
