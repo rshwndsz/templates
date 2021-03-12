@@ -8,8 +8,8 @@ from torch.utils import data as D
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from nightsight import utils
-from nightsight.log import Logger
+from projname import utils       # TODO
+from projname.log import Logger  # TODO
 logger = Logger()
 
 

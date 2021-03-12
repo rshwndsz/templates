@@ -1,6 +1,6 @@
 import pytest
 import torch
-from nightsight import loss
+from projname import loss
 
 
 def test_LSpaLoss():

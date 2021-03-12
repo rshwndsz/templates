@@ -8,7 +8,7 @@ from torch.utils import data as D
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from nightsight import data
+from projname import data # TODO
 
 
 # See https://stackoverflow.com/a/63425096

@@ -1,6 +1,6 @@
 import pytest
 import torch
-from nightsight import model
+from projname import model
 
 
 class TestEnhanceNetNoPoolCPU:

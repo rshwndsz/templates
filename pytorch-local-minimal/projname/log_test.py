@@ -1,7 +1,7 @@
 import os
 import logging
 import pytest
-from nightsight.log import Logger
+from projname.log import Logger
 
 
 def test_logger(caplog):
