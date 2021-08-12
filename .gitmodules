@@ -1,5 +1,5 @@
 [submodule "pytorch-local-segmentation"]
-	path = pytorch-local-segmentation
+	path = p-local-segm
 	url = https://github.com/rshwndsz/torch-seg
 [submodule "pl-colab"]
 	path = pl-colab
