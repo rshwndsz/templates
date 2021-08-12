@@ -4,3 +4,6 @@
 [submodule "pl-colab"]
 	path = pl-colab
 	url = https://github.com/rshwndsz/pl-colab
+[submodule "pl-local"]
+	path = pl-local
+	url = https://github.com/rshwndsz/pl-local
