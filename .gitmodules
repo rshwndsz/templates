@@ -7,3 +7,6 @@
 [submodule "pl-local"]
 	path = pl-local
 	url = https://github.com/rshwndsz/pl-local
+[submodule "p-local"]
+	path = p-local
+	url = https://github.com/rshwndsz/pytorch-local-template
